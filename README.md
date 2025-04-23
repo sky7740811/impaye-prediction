@@ -1,13 +1,13 @@
 # Impaye Prediction - Insurance Default Risk Modeling
 
-This project aims to predict which insured clients are at risk of missing payments ("impayés") based on their contract and demographic data. The work was done using real-world insurance datasets, anonymized for demonstration purposes.
+This project aims to predict which insured clients are at risk of missing payments based on their contract and demographic data. The work was done using real-world insurance datasets, anonymized for demonstration purposes.
 
 ---
 
 ## Project Overview
 - **Objective**: Build a machine learning pipeline to predict potential defaults in insurance payments
 - **Context**: Developed at ECA Assurances as part of internal data science efforts
-- **Outcome**: Increased recall on critical classes by 8%, improved model transparency
+- **Outcome**: Developed a final model achieving 71% precision in predicting payment defaults.
 
 ---
 
@@ -15,9 +15,9 @@ This project aims to predict which insured clients are at risk of missing paymen
 - Merged multiple internal tables: contract information and client demographic details
 - Preprocessing includes:
   - Cleaning inconsistent fields
-  - Merging datasets by keys (e.g., PERIODE, CONTRAT)
+  - Merging datasets by keys (CONTRAT)
   - Handling missing values and outliers
-  - Feature selection (Boruta, VIF)
+  - Feature selection (VIF)
 
 ---
 
@@ -30,7 +30,6 @@ This project aims to predict which insured clients are at risk of missing paymen
 - **Models Used**:
   - LightGBM
   - Random Forest
-  - SVM
 
 - **Evaluation**:
   - Train/test split
@@ -48,16 +47,15 @@ This project aims to predict which insured clients are at risk of missing paymen
 ---
 
 ## Project Files
-- `clean_new.ipynb`: Data cleaning, EDA, merging datasets
-- `train.ipynb`: Model training, evaluation, and interpretation
+- `pretraitement.ipynb`: Merging datasets, data cleaning, feature selection, feature engineering
+- `train.ipynb`: Model training, feature selection, evaluation, interpretation
 
 ---
 
-## ⚖Tech Stack
+## Tech Stack
 - Python
 - pandas, numpy, scikit-learn, imbalanced-learn
-- LightGBM, TensorFlow/Keras (not used here but part of author’s stack)
-- Power BI (used for internal dashboards, not in notebook)
+- LightGBM
 
 ---
 
@@ -69,5 +67,4 @@ GitHub: [github.com/chihoonlee](https://github.com/chihoonlee)
 
 ---
 
-> This project reflects personal work and experience from real-world business cases, anonymized and shared for educational and professional showcase purposes.
 
